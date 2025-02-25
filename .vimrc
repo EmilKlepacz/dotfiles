@@ -90,6 +90,9 @@ nnoremap <leader>t :%s/\s\+$//g<CR>:nohlsearch<CR>
 nnoremap <C-d> <C-d>zz
 nnoremap <C-u> <C-u>zz
 
+" Yank from cursor to end of line, to be consistent with C and D.
+nnoremap Y y$
+
 " ============ Plugins Initialization ============
 call plug#begin()
 Plug 'tpope/vim-surround'
