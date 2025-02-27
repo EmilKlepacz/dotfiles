@@ -16,6 +16,10 @@ set number
 set number relativenumber
 " Enable persistent undo
 set undofile
+" Show a few lines of context around the cursor. Makes navigation smoother.
+set scrolloff=3
+" Do incremental searching.
+set incsearch
 
 " Centralize backups, swapfiles and undo history
 if !isdirectory(expand("~/.vim/backups"))

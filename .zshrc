@@ -1,3 +1,4 @@
+#========= General =========
 alias arm="env /usr/bin/arch -arm64 /bin/zsh --login"
 
 alias intel="env /usr/bin/arch -x86_64 /bin/zsh --login"
@@ -7,6 +8,7 @@ alias dotfiles="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 # human readable long list format, appends special chars and lists hidden files
 alias l="ls -lFah"
 
+#========= Vodafone  =========
 # running WildFly quickly
 wf() {
 	~/Documents/cobra/wildfly-26.1.3.Final/bin/standalone.sh "$@"
@@ -32,5 +34,11 @@ k9p() {
 # wildfly kill
 k9wf() {
 	echo "Killing WildFly..."
-	k9p 8787
+	k9p 8787 #default wf port
+}
+
+# code server kill
+k9cs() {
+	echo "Killing GWT Code Server"
+	k9p 9876 #default code server  port
 }
