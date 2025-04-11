@@ -1,0 +1,18 @@
+[user]
+	name = Emil Klepacz
+	email = klepaczemil@gmail.com
+[core]
+	editor = vim
+	autocrlf = input
+[http]
+	postBuffer = 524288000
+[alias]
+	co = checkout
+
+	# Rebase interactively
+	rbi = "!sh -c 'if [ -z \"$1\" ]; then echo \"Error: No branch provided\" >&2; exit 1; fi; git rebase -i \"$1\"' -"
+
+	# Merge and ensure fast forward (no merge commit);
+	# if something goes wrong then abort instantly!
+	# this one is for keeping history linear an clean
+	mff = "!sh -c 'git merge --ff-only \"$1\" || git merge --abort' -"
