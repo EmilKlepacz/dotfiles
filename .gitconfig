@@ -9,6 +9,9 @@
 [alias]
 	co = checkout
 
+	# Pushes current local branch to the origin
+        pushme = "!git push origin $(git rev-parse --abbrev-ref HEAD)"
+
 	# Rebase interactively
 	rbi = "!sh -c 'if [ -z \"$1\" ]; then echo \"Error: No branch provided\" >&2; exit 1; fi; git rebase -i \"$1\"' -"
 
