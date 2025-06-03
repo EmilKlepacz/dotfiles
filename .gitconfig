@@ -19,3 +19,5 @@
 	# if something goes wrong then abort instantly!
 	# this one is for keeping history linear an clean
 	mff = "!sh -c 'git merge --ff-only \"$1\" || git merge --abort' -"
+[init]
+        defaultBranch = main
